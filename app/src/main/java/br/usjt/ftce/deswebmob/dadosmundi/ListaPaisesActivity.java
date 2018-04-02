@@ -14,6 +14,7 @@ import java.util.List;
 
 /**
  * @author William Morone Varga - RA: 81612389
+ * Turma: CCP3AN-MCA / Divisão 1
  */
 
 public class ListaPaisesActivity extends Activity {
@@ -35,7 +36,7 @@ public class ListaPaisesActivity extends Activity {
 
         // Pega o listView e configura os países do continente selecionado
         ListView listView = (ListView) findViewById(R.id.listViewPaises);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nomes);
+        PaisAdapter adapter = new PaisAdapter(this, paises);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

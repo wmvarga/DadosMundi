@@ -10,6 +10,7 @@ import android.widget.Spinner;
 
 /**
  * @author William Morone Varga - RA: 81612389
+ * Turma: CCP3AN-MCA / Divisão 1
  */
 
 public class MainActivity extends Activity {

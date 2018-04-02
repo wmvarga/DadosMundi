@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 /**
  * @author William Morone Varga - RA: 81612389
+ * Turma: CCP3AN-MCA / Divisão 1
  */
 
 public class Pais implements Serializable, Comparable{

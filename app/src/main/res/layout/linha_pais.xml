@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/imgBandeira"
+        android:padding="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgBandeira"
+        android:id="@+id/txtNomePais"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/imgBandeira"
+    android:layout_below="@id/txtNomePais"
+    android:id="@+id/txtRegiao"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:paddingLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgBandeira"
+        android:layout_below="@id/txtRegiao"
+        android:id="@+id/txtCapital"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingLeft="5dp"/>
+</RelativeLayout>
