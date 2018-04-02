@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DadosMundi</string>
+    <string name="lblSelecione">Selecione:</string>
+    <string name="btnListar">Listar</string>
+    <string-array name="continentes">
+        <item>Todos</item>
+        <item>Africa</item>
+        <item>Americas</item>
+        <item>Asia</item>
+        <item>Europe</item>
+        <item>Oceania</item>
+    </string-array>
+</resources>
