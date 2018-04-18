@@ -2,6 +2,16 @@
     <string name="app_name">DadosMundi</string>
     <string name="lblSelecione">Selecione:</string>
     <string name="btnListar">Listar</string>
+    <string name="lblRegiao">Região:</string>
+    <string name="lblCapital">Capital:</string>
+    <string name="lblSubRegiao">Sub-região:</string>
+    <string name="lblDemonimo">Demonimo:</string>
+    <string name="lblPopulacao">População:</string>
+    <string name="lblGini">Gini:</string>
+    <string name="lblLatitude">Latitude:</string>
+    <string name="lblLongitude">Longitude:</string>
+    <string name="lblTodasInformacoes">Todas informações:</string>
+    <string name="lblArea">Área:</string>
     <string-array name="continentes">
         <item>Todos</item>
         <item>Africa</item>

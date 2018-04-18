@@ -30,9 +30,7 @@ public class ListaPaisesActivity extends Activity {
         activity = this;
         // Pega o continente que foi selecionado
         Intent intent = getIntent();
-        String continente = intent.getStringExtra(MainActivity.CHAVE);
-        paises = Data.listarPaises(continente);
-        ArrayList<String> nomes = Data.listarNomes(paises);
+        paises = (ArrayList<Pais>) intent.getSerializableExtra(MainActivity.CHAVE);
 
         // Pega o listView e configura os países do continente selecionado
         ListView listView = (ListView) findViewById(R.id.listViewPaises);
