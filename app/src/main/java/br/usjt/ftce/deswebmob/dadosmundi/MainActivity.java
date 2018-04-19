@@ -3,6 +3,7 @@ package br.usjt.ftce.deswebmob.dadosmundi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteException;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -64,7 +65,13 @@ public class MainActivity extends Activity {
             finalUrl = "region/" + continente.toLowerCase();
         }
 
-        new DownloadJsonPaises().execute("https://restcountries.eu/rest/v2/" + finalUrl);
+        // Se tiver internet, baixa o json e popula o banco, caso contrário tenta pegar o que já tem
+        if (PaisesNetworking.isConnected(this)) {
+            new DownloadJsonPaises().execute("https://restcountries.eu/rest/v2/" + finalUrl);
+        } else {
+            new BuscaBancoPaises().execute();
+        }
+
     }
 
     // Classe para a thread que busca o JSON que vai vir pelo serviço
@@ -72,13 +79,50 @@ public class MainActivity extends Activity {
 
         protected ArrayList<Pais> doInBackground(String... strings) {
             ArrayList<Pais> paises = new ArrayList<>();
-            if (PaisesNetworking.isConnected(contexto)) {
-                try {
-                    paises = PaisesNetworking.buscarPaises(strings[0]);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
+            try {
+                // Busca o JSON
+                paises = PaisesNetworking.buscarPaises(strings[0]);
+                // Popula o banco do SQLite
+                PaisDb paisDb = new PaisDb(contexto);
+                paisDb.inserirPais(paises);
+
+
+            } catch (IOException | SQLiteException e) {
+                e.printStackTrace();
             }
+
+            return paises;
+        }
+
+        protected void onPostExecute(ArrayList<Pais> paises) {
+            Intent intent = new Intent(contexto, ListaPaisesActivity.class);
+            intent.putExtra(CHAVE, paises);
+            startActivity(intent);
+        }
+    }
+
+    // Classe para buscar os paises do SQLite
+    private class BuscaBancoPaises extends AsyncTask<String, Void, ArrayList<Pais>> {
+
+        protected ArrayList<Pais> doInBackground(String... strings) {
+            ArrayList<Pais> paises = new ArrayList<>();
+
+            try {
+                // Popula o banco do SQLite
+                PaisDb paisDb = new PaisDb(contexto);
+
+                // Só pega os países do continente selecionado (ou todos)
+                if (continente.equals("Todos")) {
+                    paises = paisDb.listarPaises();
+                } else {
+                    paises = paisDb.listarPaises(continente);
+                }
+
+            } catch (SQLiteException e) {
+                e.printStackTrace();
+            }
+
             return paises;
         }
 
