@@ -1,8 +1,8 @@
 package br.usjt.ftce.deswebmob.dadosmundi;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,7 +11,7 @@ import android.widget.TextView;
  * Turma: CCP3AN-MCA / Divisão 1
  */
 
-public class DetalhePaisActivity extends Activity {
+public class DetalhePaisActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
