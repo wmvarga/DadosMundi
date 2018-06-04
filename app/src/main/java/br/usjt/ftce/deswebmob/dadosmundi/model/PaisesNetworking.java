@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.model;
 
 /**
  * Created by William on 18/04/2018.
@@ -14,6 +14,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import br.usjt.ftce.deswebmob.dadosmundi.model.Pais;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

@@ -1,9 +1,11 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.model;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
 import java.lang.reflect.Field;
+
+import br.usjt.ftce.deswebmob.dadosmundi.R;
 
 /**
  * @author William Morone Varga - RA: 81612389

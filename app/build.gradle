@@ -27,4 +27,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.squareup.okhttp3:okhttp:3.10.0'
     compile 'com.android.support:support-v4:26+'
+    testImplementation 'org.mockito:mockito-all:1.9.5'
 }

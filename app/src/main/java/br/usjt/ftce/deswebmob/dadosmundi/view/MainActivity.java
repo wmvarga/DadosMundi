@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,11 +8,15 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import br.usjt.ftce.deswebmob.dadosmundi.R;
+import br.usjt.ftce.deswebmob.dadosmundi.model.Pais;
+import br.usjt.ftce.deswebmob.dadosmundi.model.PaisDb;
+import br.usjt.ftce.deswebmob.dadosmundi.model.PaisesNetworking;
 
 /**
  * @author William Morone Varga - RA: 81612389

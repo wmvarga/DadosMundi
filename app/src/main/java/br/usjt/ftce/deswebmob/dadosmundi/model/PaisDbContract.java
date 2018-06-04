@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.model;
 
 import android.provider.BaseColumns;
 

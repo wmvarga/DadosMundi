@@ -1,23 +1,25 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.view;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
+
+import br.usjt.ftce.deswebmob.dadosmundi.R;
+import br.usjt.ftce.deswebmob.dadosmundi.model.Pais;
+import br.usjt.ftce.deswebmob.dadosmundi.model.PaisAdapter;
+import br.usjt.ftce.deswebmob.dadosmundi.presenter.DetalhePaisPresenter;
 
 /**
  * @author William Morone Varga - RA: 81612389
  * Turma: CCP3AN-MCA / Divisão 1
  */
 
-public class ListaPaisesActivity extends Activity {
+public class ListaPaisesActivity extends Activity implements ListaPaisesView{
     public static final String PAIS_SELECIONADO = "br.usjt.ftce.deswebmob.dadosmundi.pais_selecionado";
     Activity activity;
     ArrayList<Pais> paises;
@@ -40,10 +42,17 @@ public class ListaPaisesActivity extends Activity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(activity, DetalhePaisActivity.class);
-                intent.putExtra(PAIS_SELECIONADO, paises.get(i));
-                startActivity(intent);
+                startNextActivity(i);
             }
         });
+    }
+
+    @Override
+    public void startNextActivity(int posicao) {
+
+        Intent intent = new Intent(activity, DetalhePaisActivity.class);
+        intent.putExtra(PAIS_SELECIONADO, paises.get(posicao));
+        startActivity(intent);
+
     }
 }

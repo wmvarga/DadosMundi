@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context="br.usjt.ftce.deswebmob.dadosmundi.DetalhePaisActivity">
+    tools:context="br.usjt.ftce.deswebmob.dadosmundi.view.DetalhePaisActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
 
     <fragment
         android:id="@+id/detalhe_pais_fragment"
-        class="br.usjt.ftce.deswebmob.dadosmundi.DetalhePaisFragment"
+        class="br.usjt.ftce.deswebmob.dadosmundi.view.DetalhePaisFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_detalhe_pais" />

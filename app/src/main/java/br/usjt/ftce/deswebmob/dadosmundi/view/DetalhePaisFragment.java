@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.view;
 
 
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import br.usjt.ftce.deswebmob.dadosmundi.R;
 
 /**
  * @author William Morone Varga - RA: 81612389

@@ -1,10 +1,8 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.model;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import static br.usjt.ftce.deswebmob.dadosmundi.PaisDbContract.PaisBanco;
 
 /**
  * Created by William on 19/04/2018.
@@ -18,22 +16,22 @@ import static br.usjt.ftce.deswebmob.dadosmundi.PaisDbContract.PaisBanco;
 public final class PaisDbHelper extends SQLiteOpenHelper {
 
     public static final String SQL_CREATE_PAIS =
-            "CREATE TABLE IF NOT EXISTS " + PaisBanco.TABLE_NAME + " ( " +
-                    PaisBanco._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    PaisBanco.NOME + " TEXT, " +
-                    PaisBanco.CODIGO3 + " TEXT, " +
-                    PaisBanco.CAPITAL + " TEXT, " +
-                    PaisBanco.REGIAO + " TEXT, " +
-                    PaisBanco.SUBREGIAO + " TEXT, " +
-                    PaisBanco.DEMONIMO + " TEXT, " +
-                    PaisBanco.POPULACAO + " INTEGER, " +
-                    PaisBanco.AREA + " INTEGER, " +
-                    PaisBanco.GINI + " DOUBLE, " +
-                    PaisBanco.LATITUDE + " DOUBLE, " +
-                    PaisBanco.LONGITUDE + " DOUBLE)";
+            "CREATE TABLE IF NOT EXISTS " + PaisDbContract.PaisBanco.TABLE_NAME + " ( " +
+                    PaisDbContract.PaisBanco._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    PaisDbContract.PaisBanco.NOME + " TEXT, " +
+                    PaisDbContract.PaisBanco.CODIGO3 + " TEXT, " +
+                    PaisDbContract.PaisBanco.CAPITAL + " TEXT, " +
+                    PaisDbContract.PaisBanco.REGIAO + " TEXT, " +
+                    PaisDbContract.PaisBanco.SUBREGIAO + " TEXT, " +
+                    PaisDbContract.PaisBanco.DEMONIMO + " TEXT, " +
+                    PaisDbContract.PaisBanco.POPULACAO + " INTEGER, " +
+                    PaisDbContract.PaisBanco.AREA + " INTEGER, " +
+                    PaisDbContract.PaisBanco.GINI + " DOUBLE, " +
+                    PaisDbContract.PaisBanco.LATITUDE + " DOUBLE, " +
+                    PaisDbContract.PaisBanco.LONGITUDE + " DOUBLE)";
 
     public  static  final  String SQL_DROP_PAIS =
-            "DROP TABLE IF EXISTS " + PaisBanco.TABLE_NAME;
+            "DROP TABLE IF EXISTS " + PaisDbContract.PaisBanco.TABLE_NAME;
 
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "Pais.db";

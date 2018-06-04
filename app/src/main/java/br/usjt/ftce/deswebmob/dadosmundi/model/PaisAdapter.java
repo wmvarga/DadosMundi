@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.dadosmundi;
+package br.usjt.ftce.deswebmob.dadosmundi.model;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -9,9 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
+
+import br.usjt.ftce.deswebmob.dadosmundi.R;
 
 /**
  * @author William Morone Varga - RA: 81612389
